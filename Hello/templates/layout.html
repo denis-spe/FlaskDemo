@@ -1,0 +1,24 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="device=device-width, initial-scale=1.0">
+        
+        <!-- link css file -->
+        <link rel="stylesheet" href="{{  url_for('static', filename='styles/style.css') }}">
+    </head>
+    <body>
+        <header></header>
+        
+        <main>
+            <!-- make main extendable -->
+            {% block main%}
+            {% endblock %}
+        </main>
+        
+        <footer><footer>
+        
+        <!-- link javascript file -->
+        <script src="{{ url_for('static', filename='styles/style.css') }}">
+        </script>
+    </body>
+</html>
