@@ -2,20 +2,38 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="device=device-width, initial-scale=1.0">
-        
+        <title>Flask Hello</title>
         <!-- link css file -->
         <link rel="stylesheet" href="{{  url_for('static', filename='styles/style.css') }}">
     </head>
     <body>
-        <header></header>
+        <header>
+            <div class="header-container">
+                <div class="header-title-container">
+                    <h1>Flask <span>Hello</span></h1>
+                </div>
+                <!-- header navs -->
+                <div class="header-nav">
+                    {% include 'nav.html' %}
+                </div>
+            </div>
+        </header>
         
         <main>
             <!-- make main extendable -->
-            {% block main%}
-            {% endblock %}
+            <div class="main-container">
+                {% block main%}
+                {% endblock %}
+            </div>
         </main>
         
-        <footer><footer>
+        <footer>
+            <div class="footer-container">
+                <div class="copyright">
+                    <p><b>Flask <span>Hello</span></b> &copy;Copyright 2022, Inc.</p>
+                </div>
+            </div>
+        </footer>
         
         <!-- link javascript file -->
         <script src="{{ url_for('static', filename='styles/style.css') }}">

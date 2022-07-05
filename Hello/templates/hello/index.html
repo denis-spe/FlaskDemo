@@ -2,7 +2,90 @@
 {% extends 'layout.html' %}
 
 {% block main %}
-<!-- Add contents for index -->
-<p>Add contents in index block</p>
+<!-- Flask logo -->
+<div class="flask-logo">
+    <img src="https://flask.palletsprojects.com/en/2.1.x/_images/flask-logo.png" alt="flask image">
+</div>
+<!-- Learning schedule -->
+<div class="schedule-container">
+    <div class="schedule-title-container">
+        <h2>Learning schedule</h2>
+    </div>
 
+    <!-- schedule figure container -->
+    <div class="schedule-figure-container">
+        <figure class="jinja-figure">
+            <div class="jinja-logo-container">
+                <img src="https://jinja.palletsprojects.com/en/3.1.x/_images/jinja-logo.png" alt="jinja logo">
+            </div>
+            <div class="jinja-intro-text-container">
+                <p>Jinja is a fast, expressive, extensible templating engine. Special placeholders in the template allow
+                    writing code similar to Python syntax. Then the template is passed data to render the final
+                    document.
+                </p>
+            </div>
+            <div class="jinja-code-container">
+                <code>
+                    <pre>
+                        {% raw %}
+                            {% extends "layout.html" %}
+                            {% block body %}
+                            &lt;ul&gt;
+                                {% for user in users %}
+                                &lt;li&gt;&lt;a href="{{ user.url }}"&gt;{{ user.username }} &lt;/a&gt; &lt;/li&gt;
+                                {% endfor %}
+                            &lt;/ul&gt;
+                            {% endblock %}
+                        {% endraw %}
+                    </pre>
+                </code>
+            </div>
+        </figure>
+        <figure class="flask-wtf-figure">
+            <div class="flask-wtf-logo-container">
+                <img src="https://flask-wtf.readthedocs.io/en/1.0.x/_images/flask-wtf.png" alt="flask wtf">
+            </div>
+            <div class="flask-wtf-intro-text-container">
+                <p>WTForms is a flexible forms validation and rendering library for Python web development. It can work
+                    with
+                    whatever web framework and template engine you choose. It supports data validation, CSRF protection,
+                    internationalization (I18N), and more. There are various community libraries that provide closer
+                    integration with popular frameworks.</p>
+            </div>
+            <div class="flask-wtf-code-container">
+                <code>
+                    <pre>
+                        class MyForm(Form):
+                            first_name = StringField('First Name', validators=[validators.input_required()])
+                            last_name  = StringField('Last Name', validators=[validators.optional()])
+                    </pre>
+                </code>
+            </div>
+        </figure>
+        <figure class="flask-sqlalchemy-figure">
+            <div class="flask-sqlalchemy-logo-container">
+                <img src="https://flask-sqlalchemy.palletsprojects.com/en/2.x/_images/flask-sqlalchemy-title.png"
+                    alt="flask sqlalchemy logo">
+            </div>
+            <div class="flask-sqlalchemy-intro-text-container">
+                <p>Flask-SQLAlchemy is an extension for Flask that adds support for SQLAlchemy to your application. It
+                    aims to simplify using SQLAlchemy with Flask by providing useful defaults and extra helpers that
+                    make it easier to accomplish common tasks.</p>
+            </div>
+            <div class="flask-sqlalchemy-code-container">
+                <code>
+                    <pre>
+                        class User(db.Model):
+                            id = db.Column(db.Integer, primary_key=True)
+                            username = db.Column(db.String(80), unique=True, nullable=False)
+                            email = db.Column(db.String(120), unique=True, nullable=False)
+
+                            def __repr__(self):
+                                return '<User %r>' % self.username
+                    </pre>
+                </code>
+            </div>
+        </figure>
+    </div>
+</div>
 {% endblock %}
