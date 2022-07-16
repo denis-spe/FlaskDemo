@@ -5,7 +5,7 @@
 }
 
 header, main, footer{
-    margin: 10% 5% 2% 5%;
+    margin: 2.5%;
 }
 
 main{
@@ -14,12 +14,14 @@ main{
 
 .main-aside{
     flex: 1;
-    width: 30%;
+    width: 10%;
+    margin-top: 10%;
 }
 
 .main-container{
     flex: 2;
-    width: 70%;
+    width: 50%;
+    position: relative;
 }
 
 .main-nav nav ul{
@@ -37,11 +39,15 @@ main{
     color: #222;
 }
 
-.flask-logo-container{
-    height: 235vh;
+.img-container{
+    transform: translate(-2%, -2%);
+    /* margin: auto; */
 }
 
-.img-container{
-    transform: translate(50%, 50%)
-    margin: auto;
+.schedule-figure-container{
+    width: 50%;
+}
+
+.jinja-figure{
+    position: relative;
 }
