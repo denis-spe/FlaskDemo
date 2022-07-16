@@ -1,3 +1,4 @@
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -12,14 +13,16 @@
                 <div class="header-title-container">
                     <h1>Flask <span>Hello</span></h1>
                 </div>
-                <!-- header navs -->
-                <div class="header-nav">
-                    {% include 'nav.html' %}
-                </div>
             </div>
         </header>
-        
         <main>
+            <aside class="main-aside">
+                <!-- header navs -->
+                <div class="main-nav">
+                    {% include 'nav.html' %}
+                </div>
+            </aside>
+            
             <!-- make main extendable -->
             <div class="main-container">
                 {% block main%}
